@@ -24,9 +24,9 @@
             };
             
             this.start = function( callback ){
-                navigator.serviceWorker.register("sw.js");
+                navigator.serviceWorker.register("https://moritzkemp.github.io/ccm-sw_prototype/sw.js");
                 navigator.serviceWorker.ready.then( reg =>{
-                    reg.active.postMessage({"resource": "./test.js"});
+                    reg.active.postMessage({"resource": "https://moritzkemp.github.io/ccm-sw_prototype/test.js"});
                 });
                 if(callback) callback();
             };
